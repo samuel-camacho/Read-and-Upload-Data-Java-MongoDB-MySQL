@@ -12,6 +12,7 @@ private String date;
 
 
 
+
 public Measure(double tValue, double lValue, String date) {
 	
 	this.tValue= tValue;

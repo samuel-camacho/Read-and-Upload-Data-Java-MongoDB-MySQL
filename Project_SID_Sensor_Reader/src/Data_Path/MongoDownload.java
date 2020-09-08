@@ -113,23 +113,22 @@ String query="";
 PreparedStatement ps;
 	if(m!=null) {
 		try {
-		//	if(m.getVariable().equals("Temp")) {
+		
 				query= "INSERT INTO medicoes_temperatura (`IDMedicao`, `Valor_Medicao_Temperatura`, `DataHoraMedicao`) values(null," +m.getTempValue()+ ",'" + m.getDay() + "')";	
 					ps = sql_connector.prepareStatement(query);
 						ps.execute(query);
-		//	}
+		
 			
-			//else if(m.getVariable().equals("Luz")) {
+			
 				query= "INSERT INTO medicoes_luminosidade (`IDMedicao`, `Valor_Medicao_Luminosidade`, `DataHoraMedicao`) values(null," +m.getLightValue()+ ",'" + m.getDay() + "')";	
 					ps = sql_connector.prepareStatement(query);
 						ps.execute(query);
-			//}
+			
 			} catch (SQLException e) {
 	e.printStackTrace();
 		}
 transf_complete=true;
 System.out.println( " - One Measure Sented To MYSQL - " + "Valor Temp: " + m.getTempValue() + " Valor Luz: " + m.getLightValue() + " / Data: " + m.getDay());
-//System.out.println( " - One Measure Sented To MYSQL - " + "Valor: " + m.getValue() + " Variável: " + m.getVariable() + " / Data: " + m.getDay());
 	}
 }
 

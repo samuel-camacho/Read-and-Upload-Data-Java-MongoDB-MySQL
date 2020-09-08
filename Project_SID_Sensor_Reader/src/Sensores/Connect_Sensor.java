@@ -16,7 +16,6 @@ public class Connect_Sensor implements MqttCallback {
 
 	private String clientId = MqttClient.generateClientId();
 	//private String broker= "wss://iot.eclipse.org:443/ws";
-	//private String clientId="clientId-ogr3XlXwCc";
 	private  MemoryPersistence persistence = new MemoryPersistence();
 	private MqttClient client;
 	private String currentMessage="";
